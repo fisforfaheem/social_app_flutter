@@ -1,0 +1,10 @@
+const API = 'http://192.168.0.110:45461/api';
+//const API = 'http://localhost:49859/api';
+
+const download = 'http://192.168.0.110:45461';
+
+// //cloud access
+// const API = 'https://socialapp.conveyor.cloud/api';
+// //const API = 'http://localhost:49859/api';
+
+// const download = 'https://
