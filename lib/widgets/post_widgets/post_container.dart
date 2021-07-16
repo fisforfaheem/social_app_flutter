@@ -5,7 +5,6 @@ import 'package:flutter_facebook_responsive_ui/config/palette.dart';
 import 'package:flutter_facebook_responsive_ui/models/models.dart';
 import 'package:flutter_facebook_responsive_ui/profile/profile_avatar.dart';
 import 'package:flutter_facebook_responsive_ui/widgets/post_widgets/more_options_post_widget.dart';
-import 'package:flutter_facebook_responsive_ui/widgets/post_widgets/share_post_widget.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:http/http.dart' as http;

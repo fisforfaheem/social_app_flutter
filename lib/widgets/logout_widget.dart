@@ -5,7 +5,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_facebook_responsive_ui/screens/screens.dart';
 import 'package:get/get.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 LogOutWidget(BuildContext context) {
   // set up the buttons

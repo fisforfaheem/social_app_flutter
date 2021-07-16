@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_facebook_responsive_ui/config/api.dart';
 import 'package:flutter_facebook_responsive_ui/screens/walls/session_wall.dart';

@@ -3,7 +3,6 @@ import 'package:flutter_facebook_responsive_ui/config/api.dart';
 import 'package:flutter_facebook_responsive_ui/controllers/post_controller.dart';
 import 'package:flutter_facebook_responsive_ui/models/models.dart';
 import 'package:flutter_facebook_responsive_ui/screens/nav_screen.dart';
-import 'package:flutter_facebook_responsive_ui/widgets/post_widgets/post_container_biitwall.dart';
 import 'package:flutter_facebook_responsive_ui/widgets/post_widgets/post_container_diary.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';

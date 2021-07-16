@@ -1,13 +1,10 @@
 import 'dart:convert';
 import 'dart:io';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_facebook_responsive_ui/config/api.dart';
 import 'package:flutter_facebook_responsive_ui/controllers/controllers.dart';
 import 'package:get/get.dart';
-import 'package:image_picker/image_picker.dart';
-import 'package:permission_handler/permission_handler.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:http/http.dart' as http;
 
