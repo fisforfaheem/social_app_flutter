@@ -138,15 +138,13 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               shadowColor: Colors.amber,
               expandedHeight: 20,
-              title: Center(
-                child: Text(
-                  'BIIT Wall',
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 35.0,
-                    fontWeight: FontWeight.bold,
-                    //  letterSpacing: -1.0,
-                  ),
+              title: Text(
+                'BIIT WALL',
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 35.0,
+                  fontWeight: FontWeight.bold,
+                  //  letterSpacing: -1.0,
                 ),
               ),
               centerTitle: false,
@@ -231,7 +229,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           name: Get.find<PostController1>().titlesList[index]));
                     },
                     child: Container(
-                      color: Colors.green[50],
+                      decoration: BoxDecoration(color: Colors.green[50]),
+                      // color: Colors.green[50],
                       padding:
                           EdgeInsets.symmetric(vertical: 10, horizontal: 10),
                       child: Text(

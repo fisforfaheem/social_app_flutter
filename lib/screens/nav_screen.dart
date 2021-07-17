@@ -17,9 +17,12 @@ class CustomeNavbar extends StatefulWidget {
 
 class _CustomeNavbarState extends State<CustomeNavbar> {
   var type = '';
+  var fullName = '';
   atStart() async {
     SharedPreferences pref = await SharedPreferences.getInstance();
     type = pref.getString("UType");
+    fullName = pref.getString("FullName");
+
     setState(() {});
   }
 
@@ -118,9 +121,15 @@ class _CustomeNavbarState extends State<CustomeNavbar> {
             decoration: BoxDecoration(
               color: Colors.white,
               boxShadow: [
+                // BoxShadow(
+                //   blurRadius: 20,
+                //   color: Colors.black.withOpacity(.1),
+                // )
                 BoxShadow(
-                  blurRadius: 20,
-                  color: Colors.black.withOpacity(.1),
+                  spreadRadius: -10,
+                  blurRadius: 60,
+                  color: Colors.black.withOpacity(.20),
+                  offset: Offset(0, 15),
                 )
               ],
             ),
@@ -137,11 +146,11 @@ class _CustomeNavbarState extends State<CustomeNavbar> {
               tabBorder: Border.all(
                   color: Colors.green, width: 0.01), // tab button border
               curve: Curves.bounceInOut, // tab animation curves
-              duration: Duration(milliseconds: 300), // tab animation duration
               // gap: 1, // the tab button gap between icon and text
               color: Colors.green[900], // unselected icon color
               activeColor: Colors.black, // selected icon and text color
-              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 16.5),
+              duration: Duration(milliseconds: 800),
               iconSize: 25, // tab button icon size
 
               tabShadow: [
@@ -153,7 +162,7 @@ class _CustomeNavbarState extends State<CustomeNavbar> {
               tabs: [
                 GButton(
                   icon: Icons.home_outlined,
-                  text: 'BIIT Wall',
+                  text: 'BIIT',
                 ),
                 GButton(
                   icon: Icons.group_outlined,
@@ -164,8 +173,13 @@ class _CustomeNavbarState extends State<CustomeNavbar> {
                   text: 'Class Wall ',
                 ),
                 GButton(
-                  icon: Icons.book_outlined,
-                  text: 'Diary ',
+                  icon: Icons.account_box,
+                  text: 'Profile',
+                  leading: CircleAvatar(
+                    radius: 12,
+                    backgroundImage: NetworkImage(
+                        'https://sooxt98.space/content/images/size/w100/2019/01/profile.png'),
+                  ),
                 ),
                 GButton(
                   icon: Icons.more_horiz_outlined,
@@ -195,7 +209,7 @@ class _CustomeNavbarState extends State<CustomeNavbar> {
                     break;
 
                   case 3:
-                    Get.offAll(() => PersonalDiary());
+                    Get.offAll(() => ProfilePage());
                     break;
 
                   case 4:

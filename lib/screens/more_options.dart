@@ -55,7 +55,7 @@ class MoreOptions extends StatelessWidget {
             SliverToBoxAdapter(
               child: InkWell(
                 onTap: () {
-                  Get.to(() => ProfilePage());
+                  Get.to(() => PersonalDiary());
                 },
                 child: Container(
                   //  color: Colors.orange[200],
@@ -72,7 +72,7 @@ class MoreOptions extends StatelessWidget {
                         width: 15,
                       ),
                       Text(
-                        'My Profie',
+                        'Personal Diary',
                         style: TextStyle(
                           fontSize: 30,
                           fontWeight: FontWeight.w700,

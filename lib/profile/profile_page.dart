@@ -44,8 +44,8 @@ class _ProfilePageState extends State<ProfilePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: CustomeNavbar(
-        ind: 4,
-      ),
+          //   ind: 4,
+          ),
       body: SafeArea(
         child: CustomScrollView(
           slivers: [

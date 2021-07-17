@@ -24,6 +24,7 @@ dependencies:
   flutter:
     sdk: flutter
   avatar_view: ^1.0.0+4
+  badges: ^2.0.1
   cached_network_image: ^3.0.0
   comment_box: ^0.0.16
   cupertino_icons: ^1.0.2
@@ -34,11 +35,11 @@ dependencies:
   google_nav_bar: ^5.0.5
   http: ^0.13.1
   image_picker: ^0.8.0+3
+  line_icons: ^2.0.1
   material_design_icons_flutter: ^4.0.5345
   material_floating_search_bar: ^0.3.4
   path_provider: ^2.0.2
   permission_handler: ^8.1.1
-  # persistent_bottom_nav_bar: ^4.0.2
   shared_preferences: ^2.0.5
   simple_speed_dial: ^0.1.3
 

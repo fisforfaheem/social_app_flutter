@@ -101,8 +101,8 @@ class _PersonalDiaryState extends State<PersonalDiary> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: CustomeNavbar(
-        ind: type.toLowerCase() == 'e' ? 2 : 3,
-      ),
+          //ind: type.toLowerCase() == 'e' ? 2 : 3,
+          ),
       body: SafeArea(
         child: CustomScrollView(
           slivers: [
