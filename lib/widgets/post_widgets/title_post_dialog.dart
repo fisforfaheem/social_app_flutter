@@ -171,38 +171,38 @@ TitlePOstDialog(BuildContext context, String id, String name) {
     actions: [
       textField,
       imageUpload,
-      Row(
-        children: [
-          Text("Saveable?"),
-          GetBuilder<PostController1>(
-            init: PostController1(),
-            initState: (_) {},
-            builder: (_) {
-              return Switch(
-                  value: _.isSwitchedOn,
-                  onChanged: (f) {
-                    _.updateIsSwitchedOn(f);
-                  });
-            },
-          ),
-        ],
-      ),
-      Row(
-        children: [
-          Text("Anonymous  Post?"),
-          GetBuilder<PostController2>(
-            init: PostController2(),
-            initState: (_) {},
-            builder: (_) {
-              return Switch(
-                  value: _.isAnonymousPost,
-                  onChanged: (f) {
-                    _.anonymousIsSwitchedOn(f);
-                  });
-            },
-          ),
-        ],
-      ),
+      // Row(
+      //   children: [
+      //     Text("Saveable?"),
+      //     GetBuilder<PostController1>(
+      //       init: PostController1(),
+      //       initState: (_) {},
+      //       builder: (_) {
+      //         return Switch(
+      //             value: _.isSwitchedOn,
+      //             onChanged: (f) {
+      //               _.updateIsSwitchedOn(f);
+      //             });
+      //       },
+      //     ),
+      //   ],
+      // ),
+      // Row(
+      //   children: [
+      //     Text("Anonymous  Post?"),
+      //     GetBuilder<PostController2>(
+      //       init: PostController2(),
+      //       initState: (_) {},
+      //       builder: (_) {
+      //         return Switch(
+      //             value: _.isAnonymousPost,
+      //             onChanged: (f) {
+      //               _.anonymousIsSwitchedOn(f);
+      //             });
+      //       },
+      //     ),
+      //   ],
+      // ),
       cancelButton,
       submitButton,
     ],

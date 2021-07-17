@@ -160,7 +160,7 @@ NewPostDialog(BuildContext context) {
       imageUpload,
       Row(
         children: [
-          Text("Saveable?"),
+          Text("Private Post?"),
           GetBuilder<PostController1>(
             init: PostController1(),
             initState: (_) {},
@@ -176,7 +176,7 @@ NewPostDialog(BuildContext context) {
       ),
       Row(
         children: [
-          Text("Anonymous  Post?"),
+          Text("Anonymous Post?"),
           GetBuilder<PostController2>(
             init: PostController2(),
             initState: (_) {},

@@ -8,7 +8,6 @@ class PostController1 extends GetxController {
   List<Post> session_posts = [];
   List<Post> group_posts = [];
   List<Post> diary_posts = [];
-
   List<String> titlesList = [];
   List<Post> titleAllPOst = [];
 

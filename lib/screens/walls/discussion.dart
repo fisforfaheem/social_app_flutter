@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_facebook_responsive_ui/config/api.dart';
 import 'package:flutter_facebook_responsive_ui/controllers/controllers.dart';
+import 'package:flutter_facebook_responsive_ui/controllers/post_controller.dart';
+import 'package:flutter_facebook_responsive_ui/screens/walls/TitleView.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:http/http.dart' as http;
@@ -118,6 +120,7 @@ class _DiscussionState extends State<Discussion> {
           SizedBox(
             height: 8,
           ),
+
           // Expanded(
           //   child: ListView.builder(
           //     itemCount: groups.length,
@@ -166,7 +169,7 @@ class _DiscussionState extends State<Discussion> {
           //       );
           //     },
           //   ),
-          // )
+          // ),
         ],
       ),
     );

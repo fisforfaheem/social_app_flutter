@@ -5,6 +5,7 @@ import 'package:flutter_facebook_responsive_ui/models/models.dart';
 import 'package:flutter_facebook_responsive_ui/screens/nav_screen.dart';
 import 'package:flutter_facebook_responsive_ui/screens/walls/TitleView.dart';
 import 'package:flutter_facebook_responsive_ui/screens/walls/add_title.dart';
+import 'package:flutter_facebook_responsive_ui/screens/walls/discussion.dart';
 import 'package:flutter_facebook_responsive_ui/widgets/post_widgets/new_Intelligent%20_post_dialog.dart';
 import 'package:flutter_facebook_responsive_ui/widgets/post_widgets/new_post_dialog_biitwall.dart';
 import 'package:flutter_facebook_responsive_ui/widgets/post_widgets/post_container_biitwall.dart';
@@ -136,7 +137,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 stretchModes: [StretchMode.blurBackground],
               ),
               shadowColor: Colors.amber,
-              expandedHeight: 10,
+              expandedHeight: 20,
               title: Center(
                 child: Text(
                   'BIIT Wall',
@@ -162,13 +163,29 @@ class _HomeScreenState extends State<HomeScreen> {
 
                 //       // Get.changeTheme(ThemeData.dark());
                 //     }),
-                CircleButton(
-                    icon: Icons.add,
-                    iconSize: 30.0,
-                    onPressed: () {
-                      //Vibration.vibrate(duration: 10, amplitude: 180);
-                      Get.to(AddTitle());
-                    }),
+
+                Container(
+                  child: Row(
+                    children: [
+                      Text(
+                        'Add New Topic',
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 15.0,
+                          fontWeight: FontWeight.normal,
+                          //  letterSpacing: -1.0,
+                        ),
+                      ),
+                      CircleButton(
+                          icon: Icons.add,
+                          iconSize: 22.0,
+                          onPressed: () {
+                            //Vibration.vibrate(duration: 10, amplitude: 180);
+                            Get.to(Discussion());
+                          }),
+                    ],
+                  ),
+                ),
               ],
             ),
             //   SliverToBoxAdapter(child: ForAI()),
@@ -205,18 +222,28 @@ class _HomeScreenState extends State<HomeScreen> {
               delegate: SliverChildBuilderDelegate(
                 (context, index) {
                   return InkWell(
+                    hoverColor: Colors.green[200],
+                    focusColor: Colors.grey,
+                    borderRadius: BorderRadius.circular(220),
+                    splashColor: Colors.green,
                     onTap: () {
                       Get.to(TitleView(
                           name: Get.find<PostController1>().titlesList[index]));
                     },
                     child: Container(
+                      color: Colors.green[50],
                       padding:
                           EdgeInsets.symmetric(vertical: 10, horizontal: 10),
                       child: Text(
                         Get.find<PostController1>()
                             .titlesList[index]
                             .split('_')[0],
-                        style: TextStyle(color: Colors.black),
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 15.0,
+                          fontFamily: 'arial',
+                          fontWeight: FontWeight.normal,
+                        ),
                       ),
                     ),
                   );
