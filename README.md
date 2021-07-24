@@ -1,20 +1,5 @@
 <h1 align="center">Hi 👋, I'm Faheem 👩‍💻</h1>
 <h3 align="center">This is My Social Media App That I Built Using FLutter SDK.</h3>
-
-
-- 🔭 I’m currently working on [www.github.com/fisforfaheem?tab=repositories](https://github.com/fisforfaheem?tab=repositories)
-
-<!-- - 👨‍💻 All of my projects are available at [www.desiprogrammer.com](https://www.desiprogrammer.com) -->
-
-- 📝 I write articles on [www.fisforfaheem.medium.com](https://fisforfaheem.medium.com/)
-
-- 💬 Ask me about **flutter, SQL , C# ....**
-
-- 📫 How to reach me fisforfaheem@gmail.com
-
-
-- ⚡ Fun fact **Started as a Failure, I Never knew I could learn this 🙂🙂**
-
                                       
    ![alt text](https://github.com/fisforfaheem/social_media_application_flutter/blob/main/images/intro-image.jpeg)
     ![alt text](https://github.com/fisforfaheem/social_media_application_flutter/blob/main/images/image1.jpeg)   
