@@ -2,12 +2,12 @@
 <h3 align="center">This is My Social Media App That I Built Using FLutter SDK.</h3>
                                       
    ![alt text](https://github.com/fisforfaheem/social_media_application_flutter/blob/main/images/intro-image.jpeg)
-    ![alt text](https://github.com/fisforfaheem/social_media_application_flutter/blob/main/images/image1.jpeg)   
-   ![alt text](https://github.com/fisforfaheem/social_media_application_flutter/blob/main/images/image2.jpeg)   
+    ![alt text](https://github.com/fisforfaheem/social_media_application_flutter/blob/main/images/all.jpg)   
+<!--    ![alt text](https://github.com/fisforfaheem/social_media_application_flutter/blob/main/images/image2.jpeg)   
    ![alt text](https://github.com/fisforfaheem/social_media_application_flutter/blob/main/images/image3.jpeg)
    ![alt text](https://github.com/fisforfaheem/social_media_application_flutter/blob/main/images/image4.jpeg)
    ![alt text](https://github.com/fisforfaheem/social_media_application_flutter/blob/main/images/image5.jpeg)
-   
+    -->
  
    
    
