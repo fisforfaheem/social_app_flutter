@@ -23,7 +23,7 @@
    ![alt text](https://github.com/fisforfaheem/social_media_application_flutter/blob/main/images/image4.jpeg)
    ![alt text](https://github.com/fisforfaheem/social_media_application_flutter/blob/main/images/image5.jpeg)
    
-   <a href="https://fisforfaheem.medium.com/" target="blank"><img align="center" src="https://github.com/fisforfaheem/social_media_application_flutter/blob/main/images/image5.jpeg" alt="" height="250" width="250" /></a>
+   <a href="https://fisforfaheem.medium.com/" target="blank"><img align="center" src="https://github.com/fisforfaheem/social_media_application_flutter/blob/main/images/image5.jpeg" alt="" height="400" width="400" /></a>
    
    
   
