@@ -23,6 +23,7 @@
    ![alt text](https://github.com/fisforfaheem/social_media_application_flutter/blob/main/images/image4.jpeg)
    ![alt text](https://github.com/fisforfaheem/social_media_application_flutter/blob/main/images/image5.jpeg)
    
+   <a href="https://fisforfaheem.medium.com/" target="blank"><img align="center" src="https://github.com/fisforfaheem/social_media_application_flutter/blob/main/images/image5.jpeg" alt="" height="120" width="120" /></a>
    
    
   
@@ -36,6 +37,6 @@
 </p>
 
 <h3 align="left">Languages and Tools:</h3>
-<p align="left">  <a href="https://flutter.dev" target="_blank"> <img src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg" alt="flutter" width="60" height="60"/> </a>  </p>
+<p align="left">  <a href="https://flutter.dev" target="_blank"> <img src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg" alt="flutter" width="60" height="60"/> </a>  </p><p align="left">  <a href="https://flutter.dev" target="_blank"> <img src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg" alt="flutter" width="60" height="60"/> </a>  </p>
 
 
