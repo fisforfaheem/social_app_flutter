@@ -17,7 +17,7 @@
 
                                       
    ![alt text](https://github.com/fisforfaheem/social_media_application_flutter/blob/main/images/intro-image.jpeg)
-   ![alt text](https://github.com/fisforfaheem/social_media_application_flutter/blob/main/images/image1.jpeg)
+ 
    ![alt text](https://github.com/fisforfaheem/social_media_application_flutter/blob/main/images/image2.jpeg)   
    ![alt text](https://github.com/fisforfaheem/social_media_application_flutter/blob/main/images/image3.jpeg)
    ![alt text](https://github.com/fisforfaheem/social_media_application_flutter/blob/main/images/image4.jpeg)
