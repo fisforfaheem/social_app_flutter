@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Faheem 👩‍💻</h1>
-<h3 align="center">This is My Social Media App That I Built Using FLutter SDK.</h3>
+<h3 align="center">A Social App Built Using FLutter SDK.</h3>
                                       
    ![alt text](https://github.com/fisforfaheem/social_media_application_flutter/blob/main/images/intro-image.jpeg)
     ![alt text](https://github.com/fisforfaheem/social_media_application_flutter/blob/main/images/all.jpg)   
