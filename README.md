@@ -14,9 +14,8 @@
 
 - ⚡ Fun fact **Started as a Failure, I Never knew I could learn this 🙂🙂**
 
-
-
- ![alt text](https://github.com/fisforfaheem/social_media_application_flutter/blob/main/images/user1.jpg)
+                                      **Landing Page**
+ ![alt text]https://github.com/fisforfaheem/social_media_application_flutter/blob/main/images/image1.jpeg)
 
 
 <h3 align="left">Connect with me:</h3>
