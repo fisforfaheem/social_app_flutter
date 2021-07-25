@@ -1,8 +1,13 @@
+
+
+
+
 <h1 align="center">Hi 👋, I'm Faheem 👩‍💻</h1>
 <h3 align="center">A Social App Built Using FLutter SDK.</h3>
                                       
    ![alt text](https://github.com/fisforfaheem/social_media_application_flutter/blob/main/images/intro-image.jpeg)
     ![alt text](https://github.com/fisforfaheem/social_media_application_flutter/blob/main/images/all.jpg)   
+    https://user-images.githubusercontent.com/35878088/126897099-7f04e32a-e464-4ae7-b45d-957219adbdde.mp4
 <!--    ![alt text](https://github.com/fisforfaheem/social_media_application_flutter/blob/main/images/image2.jpeg)   
    ![alt text](https://github.com/fisforfaheem/social_media_application_flutter/blob/main/images/image3.jpeg)
    ![alt text](https://github.com/fisforfaheem/social_media_application_flutter/blob/main/images/image4.jpeg)
