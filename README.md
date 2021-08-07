@@ -4,6 +4,16 @@
 
 <h1 align="center">Hi 👋, I'm Faheem 👩‍💻</h1>
 <h3 align="center">A Social App Built Using FLutter SDK.</h3>
+<h32 align="start">The main objective of this application is to provide a single platform for the Students/Teachers of University/College to communicate, moreover the it provides the following features to the users:<br>  
+--	Posts abouts the Events happening in the University/College <br>
+--	Group communication among the students and teachers or administration.<br>
+--	Students and employees can view their time tables, Date Sheet, Result.<br>
+--	Parents can view the activities inside university or their child's class<br>
+--	Teachers can view or inform specific class about specific event<br>
+This application can be installed on any Smartphone/Tablet/Desktops which is in the reach of the user thus providing the full features of a Social App.
+.</h2>
+
+
                                       
    ![alt text](https://github.com/fisforfaheem/social_media_application_flutter/blob/main/images/intro-image.jpeg)
     ![alt text](https://github.com/fisforfaheem/social_media_application_flutter/blob/main/images/all.jpg)   
