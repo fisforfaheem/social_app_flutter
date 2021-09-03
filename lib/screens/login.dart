@@ -137,7 +137,7 @@ class SignIn extends StatelessWidget {
                       label: loginButtonChild,
                       icon: Icon(Icons.login_outlined),
                       onPressed: () async {
-                        //Get.to(() => HomeScreen());
+                        Get.to(() => HomeScreen());
 
                         var res = await http.get(Uri.parse(
                             "$API/User/UserLogin?username=${loginUserID.text}&password=${loginUserPassword.text}"));

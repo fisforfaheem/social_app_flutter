@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_facebook_responsive_ui/config/api.dart';
 import 'package:http/http.dart' as http;
@@ -10,7 +9,6 @@ TextEditingController loginUserID = TextEditingController();
 TextEditingController loginUserPassword = TextEditingController();
 TextEditingController newPostext = TextEditingController();
 TextEditingController newGroupName = TextEditingController();
-
 TextEditingController groupName = TextEditingController();
 
 uploadFile(File fileAfterSavingLocallay) async {
