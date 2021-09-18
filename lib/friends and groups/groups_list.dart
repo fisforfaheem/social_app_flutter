@@ -57,7 +57,7 @@ class _GroupsListState extends State<GroupsList> {
               flexibleSpace: Container(),
               expandedHeight: 10,
               brightness: Brightness.light,
-              backgroundColor: Colors.green[400].withOpacity(.79),
+              backgroundColor: Colors.green[400]!.withOpacity(.79),
               title: Center(
                 child: Text(
                   'Groups',

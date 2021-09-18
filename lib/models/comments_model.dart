@@ -7,8 +7,8 @@ class CommentModel {
   final DateTime time;
 
   const CommentModel({
-    @required this.user,
-    @required this.comment,
-    @required this.time,
+    required this.user,
+    required this.comment,
+    required this.time,
   });
 }

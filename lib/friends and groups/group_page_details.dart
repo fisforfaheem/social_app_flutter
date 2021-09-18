@@ -11,7 +11,7 @@ import 'package:http/http.dart' as http;
 class GroupPageDetails extends StatefulWidget {
   final group;
 
-  const GroupPageDetails({Key key, this.group}) : super(key: key);
+  const GroupPageDetails({Key? key, this.group}) : super(key: key);
 
   @override
   State<GroupPageDetails> createState() => _GroupPageDetailsState();

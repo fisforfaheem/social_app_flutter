@@ -17,7 +17,7 @@ class AddGroup extends StatefulWidget {
 }
 
 class _AddGroupState extends State<AddGroup> {
-  File image;
+  late File image;
   List groups = [], selected = [];
   atStart() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
@@ -51,7 +51,7 @@ class _AddGroupState extends State<AddGroup> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.green[400].withOpacity(.79),
+        backgroundColor: Colors.green[400]!.withOpacity(.79),
         title: Center(
           child: Text(
             "Create A New Group",

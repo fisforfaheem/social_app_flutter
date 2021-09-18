@@ -42,8 +42,8 @@ uploadFile(File fileAfterSavingLocallay) async {
 }
 
 uploadProfile(File fileAfterSavingLocallay, regNo) async {
-  Directory dir = await getExternalStorageDirectory();
-  var path = dir.path +
+  Directory? dir = await getExternalStorageDirectory();
+  var path = dir!.path +
       '/${regNo}_new.' +
       fileAfterSavingLocallay.path.split('.').last;
   File file = File(path);

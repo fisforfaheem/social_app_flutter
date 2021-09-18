@@ -6,8 +6,8 @@ class User {
   final String regNo;
 
   const User({
-    @required this.name,
-    @required this.imageUrl,
-    @required this.regNo,
+    required this.name,
+    required this.imageUrl,
+    required this.regNo,
   });
 }

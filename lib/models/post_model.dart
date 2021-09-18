@@ -15,16 +15,16 @@ class Post {
   int isSaveAble;
 
   Post({
-    @required this.isSaveAble,
-    @required this.user,
-    @required this.pid,
-    @required this.caption,
-    @required this.timeAgo,
-    @required this.imageUrl,
-    @required this.likes,
-    @required this.comments,
-    @required this.shares,
-    @required this.isPostPinned,
-    @required this.isAlreadyLiked,
+    required this.isSaveAble,
+    required this.user,
+    required this.pid,
+    required this.caption,
+    required this.timeAgo,
+    required this.imageUrl,
+    required this.likes,
+    required this.comments,
+    required this.shares,
+    required this.isPostPinned,
+    required this.isAlreadyLiked,
   });
 }

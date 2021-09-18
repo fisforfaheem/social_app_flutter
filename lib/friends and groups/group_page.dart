@@ -15,7 +15,7 @@ import 'package:simple_speed_dial/simple_speed_dial.dart';
 //shows all posts of the corresponding group
 class GroupPage extends StatefulWidget {
   final group;
-  const GroupPage({Key key, this.group}) : super(key: key);
+  const GroupPage({Key? key, this.group}) : super(key: key);
   @override
   _GroupPageState createState() => _GroupPageState();
 }
@@ -97,7 +97,7 @@ class _GroupPageState extends State<GroupPage> {
               stretch: true,
               elevation: 5.0,
               brightness: Brightness.light,
-              backgroundColor: Colors.green[400].withOpacity(.79),
+              backgroundColor: Colors.green[400]!.withOpacity(.79),
               flexibleSpace: FlexibleSpaceBar(
                 // background: Image.asset(
                 //   'images/group3.jpg',
