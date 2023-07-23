@@ -33,7 +33,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   # dynamic_overflow_menu_bar: ^0.1.2
   # flutter_lints: ^2.0.2
-  get: ^4.1.2
+  get: ^4.6.5
   google_fonts: ^5.1.0
   google_nav_bar: ^5.0.5
   http: ^1.1.0
