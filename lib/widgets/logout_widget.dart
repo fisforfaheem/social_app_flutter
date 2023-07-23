@@ -1,7 +1,5 @@
 //SHOW MORE OPTIONS DIALOG BOX
 
-// ignore_for_file: deprecated_member_use
-
 import 'package:flutter/material.dart';
 import 'package:flutter_facebook_responsive_ui/screens/screens.dart';
 import 'package:get/get.dart';
@@ -12,8 +10,12 @@ LogOutWidget(BuildContext context) {
 //POST SAVE BUTTON
   Widget logoutButton = Container(
     color: Colors.white.withOpacity(.79),
-    child: FlatButton(
-      hoverColor: Colors.green[100],
+    child: TextButton(
+      style: ButtonStyle(
+        backgroundColor:
+            MaterialStateProperty.all(Colors.white.withOpacity(.79)),
+        overlayColor: MaterialStateProperty.all(Colors.green[100]),
+      ),
       child: Column(
         children: [
           Icon(
@@ -40,16 +42,16 @@ LogOutWidget(BuildContext context) {
     ),
   );
 
-  Widget cancelButton = FlatButton(
-    hoverColor: Colors.red[100],
+  Widget cancelButton = TextButton(
+    style: ButtonStyle(
+      overlayColor: MaterialStateProperty.all(Colors.red[100]),
+    ),
     child: Container(
       child: Column(
         children: [
           Icon(
             (Icons.cancel_outlined),
-            // hoverColor: Colors.green,
             color: Colors.black,
-            // color: Colors.blueGrey[200],
             size: 20,
           ),
           Text(

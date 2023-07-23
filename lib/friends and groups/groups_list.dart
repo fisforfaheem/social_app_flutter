@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_facebook_responsive_ui/config/api.dart';
 import 'package:flutter_facebook_responsive_ui/friends%20and%20groups/add_group.dart';
 import 'package:flutter_facebook_responsive_ui/profile/profile_avatar.dart';
@@ -56,7 +56,6 @@ class _GroupsListState extends State<GroupsList> {
             SliverAppBar(
               flexibleSpace: Container(),
               expandedHeight: 10,
-              brightness: Brightness.light,
               backgroundColor: Colors.green[400]!.withOpacity(.79),
               title: Center(
                 child: Text(
@@ -80,7 +79,7 @@ class _GroupsListState extends State<GroupsList> {
                       Get.to(AddGroup());
                       // NewGroupDialog(context);
                     }),
-              ],
+              ], systemOverlayStyle: SystemUiOverlayStyle.dark,
             ),
             groupsList.length == 0
                 ? SliverToBoxAdapter(

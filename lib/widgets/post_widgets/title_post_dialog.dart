@@ -17,29 +17,25 @@ class MyLayout extends StatefulWidget {
 }
 
 class _MyLayoutState extends State<MyLayout> {
-  @override
-  // ignore: override_on_non_overriding_member
-
-  // ignore: override_on_non_overriding_member
-  File image;
+  late File? image = null;
 
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(18.0),
-      // ignore: missing_required_param
       child: ElevatedButton(
-        //child: Text('add post'),
         onPressed: () {
           TitlePOstDialog(context, "8", "");
         },
+        child: null,
       ),
     );
   }
 }
 
 TitlePOstDialog(BuildContext context, String id, String name) {
-  File image;
-  // set up the buttons
+  late File image;
+  TextEditingController newPostext = TextEditingController();
+
   Widget textField = Container(
     child: Padding(
       padding: const EdgeInsets.all(10.0),
@@ -48,7 +44,7 @@ TitlePOstDialog(BuildContext context, String id, String name) {
         decoration: InputDecoration(
           enabledBorder: OutlineInputBorder(
             borderSide: BorderSide(
-              color: Colors.green[200],
+              color: Colors.green[200]!,
             ),
             borderRadius: BorderRadius.circular(10.0),
           ),
@@ -61,15 +57,14 @@ TitlePOstDialog(BuildContext context, String id, String name) {
       ),
     ),
   );
+
   Widget imageUpload = Container(
     child: Row(
       children: [
-        image != null
-            ? Image.file(
-                image,
-                height: 100,
-              )
-            : Container(),
+        Image.file(
+          image,
+          height: 100,
+        ),
         IconButton(
           icon: Icon(
             Icons.add_a_photo_outlined,
@@ -80,7 +75,7 @@ TitlePOstDialog(BuildContext context, String id, String name) {
             if (await Permission.storage.request().isGranted) {
               final picker = ImagePicker();
               final pickedFile =
-                  await picker.getImage(source: ImageSource.gallery);
+                  await picker.pickImage(source: ImageSource.gallery);
 
               if (pickedFile != null) {
                 image = File(pickedFile.path);
@@ -97,9 +92,7 @@ TitlePOstDialog(BuildContext context, String id, String name) {
     ),
   );
 
-  // ignore: deprecated_member_use
-  Widget submitButton = FlatButton(
-    hoverColor: Colors.green,
+  Widget submitButton = ElevatedButton(
     child: Text(
       "Submit",
     ),
@@ -114,12 +107,8 @@ TitlePOstDialog(BuildContext context, String id, String name) {
       var img = prefs.getString(
         "img",
       );
-      // var wallType = prefs.getString(
-      //   "wallType",
-      // );
 
-      print(img);
-      String filename = await uploadFile(File(img));
+      String filename = await uploadFile(File(img!));
       filename = filename.replaceAll('"', "");
       print(filename);
       int isSave = 1;
@@ -137,7 +126,7 @@ TitlePOstDialog(BuildContext context, String id, String name) {
           Date: DateTime.now().toLocal(),
           Id: 1,
           Session_Post: "",
-          Sposted_By: userId,
+          Sposted_By: userId!,
           Type: "",
           Wall_Post_Type: name,
           Description: newPostext.text,
@@ -153,9 +142,8 @@ TitlePOstDialog(BuildContext context, String id, String name) {
       Get.close(1);
     },
   );
-  // ignore: deprecated_member_use
-  Widget cancelButton = FlatButton(
-    hoverColor: Colors.green,
+
+  Widget cancelButton = ElevatedButton(
     child: Text(
       "Cancel",
     ),
@@ -164,55 +152,30 @@ TitlePOstDialog(BuildContext context, String id, String name) {
     },
   );
 
-  // set up the AlertDialog
   AlertDialog alert = AlertDialog(
     title: Text("New Post"),
-    //content: Text(""),
     actions: [
       textField,
       imageUpload,
-      // Row(
-      //   children: [
-      //     Text("Saveable?"),
-      //     GetBuilder<PostController1>(
-      //       init: PostController1(),
-      //       initState: (_) {},
-      //       builder: (_) {
-      //         return Switch(
-      //             value: _.isSwitchedOn,
-      //             onChanged: (f) {
-      //               _.updateIsSwitchedOn(f);
-      //             });
-      //       },
-      //     ),
-      //   ],
-      // ),
-      // Row(
-      //   children: [
-      //     Text("Anonymous  Post?"),
-      //     GetBuilder<PostController2>(
-      //       init: PostController2(),
-      //       initState: (_) {},
-      //       builder: (_) {
-      //         return Switch(
-      //             value: _.isAnonymousPost,
-      //             onChanged: (f) {
-      //               _.anonymousIsSwitchedOn(f);
-      //             });
-      //       },
-      //     ),
-      //   ],
-      // ),
       cancelButton,
       submitButton,
     ],
   );
 
-  // show the dialog
   showDialog(
     context: context,
     builder: (BuildContext context) {
       return alert;
     },
   );
+}
+
+Future<String> uploadFile(File file) async {
+  var request = http.MultipartRequest(
+    "POST",
+    Uri.parse(API + "/Post/UploadImage"),
+  );
+  request.files.add(await http.MultipartFile.fromPath("file", file.path));
+  var res = await request.send();
+  return res.stream.transform(utf8.decoder).single;
 }

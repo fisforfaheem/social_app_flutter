@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter/widgets.dart';
 
 import 'package:flutter_facebook_responsive_ui/screens/screens.dart';
 import 'package:flutter_facebook_responsive_ui/screens/walls/discussion.dart';
@@ -26,7 +25,6 @@ class MoreOptions extends StatelessWidget {
                   // ),
                   ),
               expandedHeight: 10,
-              brightness: Brightness.light,
               backgroundColor: Colors.green.withOpacity(.79),
               title: Center(
                 child: Text(
@@ -49,7 +47,7 @@ class MoreOptions extends StatelessWidget {
                     onPressed: () {
                       LogOutWidget(context);
                     }),
-              ],
+              ], systemOverlayStyle: SystemUiOverlayStyle.dark,
             ),
             //My profile
             SliverToBoxAdapter(

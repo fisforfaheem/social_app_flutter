@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_facebook_responsive_ui/config/api.dart';
 import 'package:flutter_facebook_responsive_ui/profile/Profile_Page_Avatar.dart';
 import 'package:flutter_facebook_responsive_ui/profile/change_profile_pic_dialog.dart';
@@ -57,7 +58,6 @@ class _ProfilePageState extends State<ProfilePage> {
                   // ),
                   ),
               expandedHeight: 10,
-              brightness: Brightness.light,
               backgroundColor: Colors.green[400].withOpacity(.79),
               title: Center(
                 child: Text(
@@ -79,7 +79,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   iconSize: 30.0,
                   onPressed: () => ChangeProfilePicDialog(context),
                 ),
-              ],
+              ], systemOverlayStyle: SystemUiOverlayStyle.dark,
             ),
             SliverToBoxAdapter(
               child: Column(

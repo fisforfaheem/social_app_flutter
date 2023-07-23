@@ -126,8 +126,7 @@ class _AddGroupState extends State<AddGroup> {
                   ),
                 ),
               ),
-              // ignore: deprecated_member_use
-              FlatButton(
+              ElevatedButton(
                 child: Column(
                   children: [
                     Text('Select an image for group'),
@@ -142,7 +141,7 @@ class _AddGroupState extends State<AddGroup> {
                   if (await Permission.storage.request().isGranted) {
                     final picker = ImagePicker();
                     final pickedFile =
-                        await picker.getImage(source: ImageSource.gallery);
+                        await picker.pickImage(source: ImageSource.gallery);
 
                     if (pickedFile != null) {
                       image = File(pickedFile.path);

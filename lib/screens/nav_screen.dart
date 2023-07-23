@@ -4,7 +4,6 @@ import 'package:flutter_facebook_responsive_ui/screens/walls/walls.dart';
 import 'package:get/get.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
-import 'walls/class_wall.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class CustomeNavbar extends StatefulWidget {

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_facebook_responsive_ui/config/api.dart';
 import 'package:flutter_facebook_responsive_ui/controllers/post_controller.dart';
 import 'package:flutter_facebook_responsive_ui/models/models.dart';
@@ -115,7 +116,6 @@ class _PersonalDiaryState extends State<PersonalDiary> {
                   // ),
                   ),
               expandedHeight: 10,
-              brightness: Brightness.light,
               backgroundColor: Colors.green.withOpacity(.79),
               title: Center(
                 child: Text(
@@ -136,7 +136,7 @@ class _PersonalDiaryState extends State<PersonalDiary> {
                 //   iconSize: 30.0,
                 //   onPressed: () => print(''),
                 // ),
-              ],
+              ], systemOverlayStyle: SystemUiOverlayStyle.dark,
             ),
             GetBuilder<PostController1>(
               init: PostController1(),

@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_facebook_responsive_ui/models/user_model.dart';
 
 class CommentModel {

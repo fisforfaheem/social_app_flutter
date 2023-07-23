@@ -2,6 +2,7 @@
 
 import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_facebook_responsive_ui/config/config.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -50,7 +51,6 @@ class _GroupPageDetailsState extends State<GroupPageDetails> {
         child: CustomScrollView(
           slivers: [
             SliverAppBar(
-              brightness: Brightness.light,
               backgroundColor: Colors.green[400],
               title: Text(
                 'Group Details',
@@ -83,7 +83,7 @@ class _GroupPageDetailsState extends State<GroupPageDetails> {
                 //   iconSize: 30.0,
                 //   onPressed: () => print('Members of This Group'),
                 // ),
-              ],
+              ], systemOverlayStyle: SystemUiOverlayStyle.dark,
             ),
 
             ///delte button

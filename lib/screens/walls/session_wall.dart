@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_facebook_responsive_ui/config/api.dart';
 import 'package:flutter_facebook_responsive_ui/controllers/post_controller.dart';
 import 'package:flutter_facebook_responsive_ui/models/models.dart';
@@ -115,7 +116,6 @@ class _SessionWallState extends State<SessionWall> {
             SliverAppBar(
               stretch: true,
               elevation: 5.0,
-              brightness: Brightness.light,
               backgroundColor: Colors.green[400].withOpacity(.79),
               flexibleSpace: FlexibleSpaceBar(
                 // background: Image.asset(
@@ -158,7 +158,7 @@ class _SessionWallState extends State<SessionWall> {
                 //       //Vibration.vibrate(duration: 10, amplitude: 180);
                 //       Get.offAll(SignIn());
                 //     }),
-              ],
+              ], systemOverlayStyle: SystemUiOverlayStyle.dark,
             ),
             //   SliverToBoxAdapter(child: ForAI()),
             //AI post

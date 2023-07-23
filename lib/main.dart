@@ -6,7 +6,6 @@ import 'package:flutter_facebook_responsive_ui/screens/screens.dart';
 import 'package:flutter_facebook_responsive_ui/screens/walls/biit_wall.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 var screen;

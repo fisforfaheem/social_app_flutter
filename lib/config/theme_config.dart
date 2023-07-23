@@ -11,39 +11,50 @@ class ThemeConfig {
   static Color badgeColor = Colors.red;
 
   static ThemeData lightTheme = ThemeData(
-    backgroundColor: lightBG,
     primaryColor: lightPrimary,
-    // ignore: deprecated_member_use
-    accentColor: lightAccent,
     scaffoldBackgroundColor: lightBG,
     appBarTheme: AppBarTheme(
       elevation: 0,
-      textTheme: TextTheme(
-        headline6: TextStyle(
+      toolbarTextStyle: TextTheme(
+        titleLarge: TextStyle(
           color: darkBG,
           fontSize: 18.0,
           fontWeight: FontWeight.w800,
         ),
-      ),
+      ).bodyMedium,
+      titleTextStyle: TextTheme(
+        titleLarge: TextStyle(
+          color: darkBG,
+          fontSize: 18.0,
+          fontWeight: FontWeight.w800,
+        ),
+      ).titleLarge,
     ),
+    colorScheme: ColorScheme.fromSwatch().copyWith(secondary: lightAccent),
+    // colorScheme: ColorScheme(background: lightBG),
   );
 
   static ThemeData darkTheme = ThemeData(
     brightness: Brightness.dark,
-    backgroundColor: darkBG,
     primaryColor: darkPrimary,
-    // ignore: deprecated_member_use
-    accentColor: darkAccent,
     scaffoldBackgroundColor: darkBG,
     appBarTheme: AppBarTheme(
       elevation: 0,
-      textTheme: TextTheme(
-        headline6: TextStyle(
+      toolbarTextStyle: TextTheme(
+        titleLarge: TextStyle(
           color: lightBG,
           fontSize: 18.0,
           fontWeight: FontWeight.w800,
         ),
-      ),
+      ).bodyMedium,
+      titleTextStyle: TextTheme(
+        titleLarge: TextStyle(
+          color: lightBG,
+          fontSize: 18.0,
+          fontWeight: FontWeight.w800,
+        ),
+      ).titleLarge,
     ),
+    // colorScheme: ColorScheme.fromSwatch().copyWith(secondary: darkAccent), colorScheme: ColorScheme(background: darkBG),
   );
 }

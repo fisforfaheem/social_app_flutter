@@ -1,21 +1,19 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_facebook_responsive_ui/config/config.dart';
-import 'package:flutter_facebook_responsive_ui/config/palette.dart';
 import 'package:flutter_facebook_responsive_ui/models/models.dart';
 import 'package:flutter_facebook_responsive_ui/profile/profile_avatar.dart';
 import 'package:flutter_facebook_responsive_ui/widgets/post_widgets/more_options_post_widget.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:http/http.dart' as http;
-import 'more_options_post_widget.dart';
 
 class PostContainer extends StatelessWidget {
   final Post post;
 
   const PostContainer({
-    Key key,
-    @required this.post,
+    Key? key,
+    required this.post,
   }) : super(key: key);
 
   @override
@@ -67,8 +65,8 @@ class _PostHeader extends StatelessWidget {
   final Post post;
 
   const _PostHeader({
-    Key key,
-    @required this.post,
+    Key? key,
+    required this.post,
   }) : super(key: key);
 
   @override
@@ -118,7 +116,7 @@ class _PostHeader extends StatelessWidget {
           icon: const Icon(Icons.more_horiz),
           onPressed: () async {
             SharedPreferences prefs = await SharedPreferences.getInstance();
-            String isDiary = prefs.getString("diary");
+            String? isDiary = prefs.getString("diary");
             print("diary ==== " + isDiary.toString());
             if (isDiary == "yes") {
               print("3456789");
@@ -140,8 +138,8 @@ class _PostStats extends StatefulWidget {
   final Post post;
 
   const _PostStats({
-    Key key,
-    @required this.post,
+    Key? key,
+    required this.post,
   }) : super(key: key);
 
   @override
@@ -235,7 +233,7 @@ class _PostStatsState extends State<_PostStats> {
                   size: 20.0,
                 ),
                 label: 'Like',
-                onTap: () {
+                onPressed: () {
                   fecthData();
 
                   ;
@@ -247,7 +245,7 @@ class _PostStatsState extends State<_PostStats> {
                   size: 20.0,
                 ),
                 label: 'Comment',
-                onTap: () {
+                onPressed: () {
                   // Get.to(TestMe());
                 }),
             _PostButton(
@@ -257,7 +255,7 @@ class _PostStatsState extends State<_PostStats> {
                 size: 25.0,
               ),
               label: 'Share',
-              onTap: () {
+              onPressed: () {
                 // SharePostDialogBiit(context);
               },
             )
@@ -275,13 +273,13 @@ class _PostStatsState extends State<_PostStats> {
 class _PostButton extends StatelessWidget {
   final Icon icon;
   final String label;
-  final Function onTap;
+  final void Function()? onPressed;
 
   const _PostButton({
-    Key key,
-    @required this.icon,
-    @required this.label,
-    @required this.onTap,
+    Key? key,
+    required this.icon,
+    required this.label,
+    required this.onPressed,
   }) : super(key: key);
 
   @override
@@ -290,7 +288,7 @@ class _PostButton extends StatelessWidget {
       child: Material(
         color: Colors.white,
         child: InkWell(
-          onTap: onTap,
+          onTap: onPressed,
           child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 12.0),
             height: 25.0,

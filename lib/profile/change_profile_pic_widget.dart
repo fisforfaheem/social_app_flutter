@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_null_comparison
+
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_facebook_responsive_ui/controllers/controllers.dart';
@@ -35,7 +37,7 @@ class _MyLayoutState extends State<MyLayout> {
   // ignore: override_on_non_overriding_member
 
   // ignore: override_on_non_overriding_member
-  File image;
+  late File image;
 
   Widget build(BuildContext context) {
     return Padding(
@@ -46,13 +48,14 @@ class _MyLayoutState extends State<MyLayout> {
         onPressed: () {
           ChangeProfilePic(context);
         },
+        child: null,
       ),
     );
   }
 }
 
 ChangeProfilePic(BuildContext context) {
-  File image;
+  File? image = null;
   // set up the buttons
 
   Widget imageUpload = Container(
@@ -74,13 +77,13 @@ ChangeProfilePic(BuildContext context) {
             if (await Permission.storage.request().isGranted) {
               final picker = ImagePicker();
               final pickedFile =
-                  await picker.getImage(source: ImageSource.gallery);
+                  await picker.pickImage(source: ImageSource.gallery);
 
               if (pickedFile != null) {
                 image = File(pickedFile.path);
                 SharedPreferences pref = await SharedPreferences.getInstance();
-                pref.setString("img", image.path);
-                print(image.path);
+                pref.setString("img", image!.path);
+                print(image?.path);
               } else {
                 print('No image selected.');
               }
@@ -92,8 +95,10 @@ ChangeProfilePic(BuildContext context) {
   );
 
   // ignore: deprecated_member_use
-  Widget submitButton = FlatButton(
-    hoverColor: Colors.green,
+  Widget submitButton = TextButton(
+    style: ButtonStyle(
+      foregroundColor: MaterialStateProperty.all<Color>(Colors.green),
+    ),
     child: Text(
       "Submit",
     ),
@@ -102,7 +107,7 @@ ChangeProfilePic(BuildContext context) {
 
       var img = prefs.getString("img");
       var userId = prefs.getString("userId");
-      print(".....-----" + img);
+      print(".....-----" + img!);
       String filename = await uploadProfile(File(img), userId);
       filename = filename.replaceAll('"', "");
       print(filename);
@@ -114,8 +119,10 @@ ChangeProfilePic(BuildContext context) {
     },
   );
   // ignore: deprecated_member_use
-  Widget cancelButton = FlatButton(
-    hoverColor: Colors.green,
+  Widget cancelButton = TextButton(
+    style: ButtonStyle(
+      foregroundColor: MaterialStateProperty.all<Color>(Colors.green),
+    ),
     child: Text(
       "Cancel",
     ),

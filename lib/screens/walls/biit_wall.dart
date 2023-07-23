@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_facebook_responsive_ui/config/api.dart';
 import 'package:flutter_facebook_responsive_ui/controllers/post_controller.dart';
 import 'package:flutter_facebook_responsive_ui/models/models.dart';
 import 'package:flutter_facebook_responsive_ui/screens/nav_screen.dart';
 import 'package:flutter_facebook_responsive_ui/screens/walls/TitleView.dart';
-import 'package:flutter_facebook_responsive_ui/screens/walls/add_title.dart';
 import 'package:flutter_facebook_responsive_ui/screens/walls/discussion.dart';
 import 'package:flutter_facebook_responsive_ui/widgets/post_widgets/new_Intelligent%20_post_dialog.dart';
-import 'package:flutter_facebook_responsive_ui/widgets/post_widgets/new_post_dialog_biitwall.dart';
 import 'package:flutter_facebook_responsive_ui/widgets/post_widgets/post_container_biitwall.dart';
 import 'package:flutter_facebook_responsive_ui/widgets/widgets.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -127,7 +126,6 @@ class _HomeScreenState extends State<HomeScreen> {
             SliverAppBar(
               stretch: true,
               elevation: 5.0,
-              brightness: Brightness.light,
               backgroundColor: Colors.green[400].withOpacity(.79),
               flexibleSpace: FlexibleSpaceBar(
                 // background: Image.asset(
@@ -184,7 +182,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ],
                   ),
                 ),
-              ],
+              ], systemOverlayStyle: SystemUiOverlayStyle.dark,
             ),
             //   SliverToBoxAdapter(child: ForAI()),
             //AI post

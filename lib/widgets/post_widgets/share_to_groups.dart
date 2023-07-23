@@ -14,7 +14,7 @@ class Share extends StatefulWidget {
   // const Share({ Key? key }) : super(key: key);
   final Post pid;
 
-  const Share({Key key, this.pid}) : super(key: key);
+  const Share({Key? key, required this.pid}) : super(key: key);
 
   @override
   _ShareState createState() => _ShareState();

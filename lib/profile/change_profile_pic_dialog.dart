@@ -29,7 +29,7 @@ class _MyLayoutState extends State<MyLayout> {
   // ignore: override_on_non_overriding_member
 
   // ignore: override_on_non_overriding_member
-  File image;
+  late File? image = null;
 
   Widget build(BuildContext context) {
     return Padding(
@@ -41,6 +41,7 @@ class _MyLayoutState extends State<MyLayout> {
           // Get.off(2);
           ChangeProfilePicDialog(context);
         },
+        child: null,
       ),
     );
   }
@@ -52,37 +53,34 @@ ChangeProfilePicDialog(BuildContext context) {
   // set up the buttons
 
   // ignore: deprecated_member_use
-  Widget uploadButton = FlatButton(
-    hoverColor: Colors.green[200],
-    child: Text(
-      "Upload New Picture",
+  Widget uploadButton = TextButton(
+    style: ButtonStyle(
+      backgroundColor: MaterialStateProperty.all<Color>(Colors.green[200]!),
     ),
     onPressed: () async {
       //Get.close(1);
       Get.to(ChangeProfilePic(context));
     },
+    child: Text("Upload New Picture"),
   );
-  // ignore: deprecated_member_use
-  Widget cancelButton = FlatButton(
-    hoverColor: Colors.green[200],
-    child: Text(
-      "Cancel",
+  Widget cancelButton = TextButton(
+    style: ButtonStyle(
+      backgroundColor: MaterialStateProperty.all<Color>(Colors.green[200]!),
     ),
     onPressed: () {
       Get.close(1);
     },
+    child: Text("Cancel"),
   );
-  // ignore: deprecated_member_use
-  Widget defaultImage = FlatButton(
-    hoverColor: Colors.green[200],
-    child: Text(
-      "Default Picture",
+  Widget defaultImage = TextButton(
+    style: ButtonStyle(
+      backgroundColor: MaterialStateProperty.all<Color>(Colors.green[200]!),
     ),
     onPressed: () {
       Get.close(1);
     },
+    child: Text("Default Picture"),
   );
-
   // set up the AlertDialog
   AlertDialog alert = AlertDialog(
     title: Text("Change Profile Picture"),
