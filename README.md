@@ -6,11 +6,14 @@
 <h3 align="center">A Social App Built Using FLutter.</h3>
 <h32 align="start">The main objective of this application is to provide a single platform for the Students/Teachers of University/College to communicate, moreover the it provides the following features to the users:<br> <br>
   Students and Teachers in my University should be able to communicate with one another seamlessly and effortlessly, without getting bogged down in unnecessary or irrelevant platforms and ways to accomplish something that is simple and easily managed.<br><br>
+
+  My idea is to bring the teachers and students together to build a community that transforms them into a productive and effective knowledgeable beings that work together to solve problems, get right and accurate information and learn about important happenings in such a way that they become pioneers and never feel lost in any way.<br><br>
 --	Posts abouts the Events happening in the University/College <br>
 --	Group communication among the students and teachers or administration.<br>
 --	Students and employees can view their time tables, Date Sheet, Result.<br>
 --	Parents can view the activities inside university or their child's class<br>
 --	Teachers can view or inform specific class about specific event<br>
+  <br>
 This application can be installed on any Smartphone/Tablet/Desktops which is in the reach of the user thus providing the full features of a Social App.
 .</h2>
 
