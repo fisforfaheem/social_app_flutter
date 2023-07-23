@@ -16,7 +16,7 @@ class Discussion extends StatefulWidget {
 }
 
 class _DiscussionState extends State<Discussion> {
-  File image;
+  late File image;
   List groups = [], selected = [];
   atStart() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
@@ -50,7 +50,7 @@ class _DiscussionState extends State<Discussion> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.green[400].withOpacity(.79),
+        backgroundColor: Colors.green[400]?.withOpacity(.79),
         title: Center(
           child: Text(
             "Discussion title",
@@ -72,7 +72,8 @@ class _DiscussionState extends State<Discussion> {
               // String filename = await uploadFile(image);
               // filename = filename.replaceAll('"', "");
               // print(filename);
-              TitleAdd title = TitleAdd(title1: groupName.text);
+              // TitleAdd title = TitleAdd(title1: groupName.text);
+              TitleAdd title = TitleAdd(id: 0, title1: groupName.text);
               var json = title.toJson();
               // ignore: unused_local_variable
               var res = await http.get(

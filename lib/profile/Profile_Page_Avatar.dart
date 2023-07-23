@@ -8,8 +8,8 @@ class ProfilePageAvatar extends StatelessWidget {
   final bool hasBorder;
 
   const ProfilePageAvatar({
-    Key key,
-    @required this.imageUrl,
+    Key? key,
+    required this.imageUrl,
     this.isActive = true,
     this.hasBorder = true,
   }) : super(key: key);

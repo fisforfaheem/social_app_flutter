@@ -14,8 +14,7 @@ showMoreDialog(BuildContext context, Post p) {
 
   Widget pinPost = Container(
     color: Colors.white.withOpacity(.79),
-    child: FlatButton(
-      hoverColor: Colors.blue[100],
+    child: TextButton(
       child: Column(
         children: [
           Icon(
@@ -50,8 +49,7 @@ showMoreDialog(BuildContext context, Post p) {
   );
 //POST SAVE BUTTON
   Widget savePost = Container(
-    child: FlatButton(
-      hoverColor: Colors.green[100],
+    child: TextButton(
       child: Column(
         children: [
           Icon(
@@ -88,8 +86,7 @@ showMoreDialog(BuildContext context, Post p) {
     ),
   );
 
-  Widget cancelButton = FlatButton(
-    hoverColor: Colors.red[100],
+  Widget cancelButton = TextButton(
     child: Column(
       children: [
         Icon(

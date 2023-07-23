@@ -126,7 +126,7 @@ class _HomeScreenState extends State<HomeScreen> {
             SliverAppBar(
               stretch: true,
               elevation: 5.0,
-              backgroundColor: Colors.green[400].withOpacity(.79),
+              backgroundColor: Colors.green[400]?.withOpacity(.79),
               flexibleSpace: FlexibleSpaceBar(
                 // background: Image.asset(
                 //   'images/group3.jpg',
@@ -182,7 +182,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     ],
                   ),
                 ),
-              ], systemOverlayStyle: SystemUiOverlayStyle.dark,
+              ],
+              systemOverlayStyle: SystemUiOverlayStyle.dark,
             ),
             //   SliverToBoxAdapter(child: ForAI()),
             //AI post

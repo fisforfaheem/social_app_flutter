@@ -12,16 +12,16 @@ class TitlePost {
   String Wall_Post_Type;
   String Session_Post;
   TitlePost({
-    this.Id,
-    this.Description,
-    this.Sposted_By,
-    this.Eposted_By,
-    this.Type,
-    this.Post_Pic,
-    this.Title_Id,
-    this.Date,
-    this.Wall_Post_Type,
-    this.Session_Post,
+    required this.Id,
+    required this.Description,
+    required this.Sposted_By,
+    required this.Eposted_By,
+    required this.Type,
+    required this.Post_Pic,
+    required this.Title_Id,
+    required this.Date,
+    required this.Wall_Post_Type,
+    required this.Session_Post,
   });
 
   Map<String, dynamic> toMap() {
@@ -64,8 +64,8 @@ class TitleAdd {
   int id;
   String title1;
   TitleAdd({
-    this.id,
-    this.title1,
+    required this.id,
+    required this.title1,
   });
 
   Map<String, dynamic> toMap() {

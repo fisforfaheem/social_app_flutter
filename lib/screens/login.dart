@@ -126,12 +126,21 @@ class SignIn extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     // ignore: deprecated_member_use
-                    FlatButton.icon(
-                      height: 45,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: new BorderRadius.circular(18.0),
-                          side: BorderSide(color: Colors.green[300])),
-                      color: Colors.green.withOpacity(.79),
+                    TextButton.icon(
+                      style: ButtonStyle(
+                        fixedSize: MaterialStateProperty.all<Size>(
+                            Size.fromHeight(45)),
+                        shape: MaterialStateProperty.all<OutlinedBorder>(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(18.0),
+                            side: BorderSide(color: Colors.green[300]!),
+                          ),
+                        ),
+                        backgroundColor: MaterialStateProperty.all<Color>(
+                          Colors.green.withOpacity(.79),
+                        ),
+                      ),
+                      // height: 45,
                       label: loginButtonChild,
                       icon: Icon(Icons.login_outlined),
                       onPressed: () async {
@@ -196,7 +205,7 @@ class SignIn extends StatelessWidget {
 
                     //forgotpassword
                     // ignore: deprecated_member_use
-                    // FlatButton.icon(
+                    // TextButton.icon(
                     //   onPressed: () async {
                     //     // Get.to(() => NavScreen());
                     //     // Vibration.vibrate(duration: 10, amplitude: 180);

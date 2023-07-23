@@ -83,8 +83,9 @@
 //   );
 
 //   // ignore: deprecated_member_use
-//   Widget submitButton = FlatButton(
-//     hoverColor: Colors.green,
+//   Widget submitButton = TextButton(
+//     style: ButtonStyle(
+
 //     child: Text(
 //       "Add Gpost",
 //     ),
@@ -101,7 +102,7 @@
 //         "img",
 //       );
 // // file uploading
-//       String filename = await uploadFile(File(img));
+//       String filename = await uploadFile(File(img!));
 
 //       filename = filename.replaceAll('"', "");
 //       print(filename);
@@ -130,8 +131,9 @@
 //     },
 //   );
 //   // ignore: deprecated_member_use
-//   Widget cancelButton = FlatButton(
-//     hoverColor: Colors.green,
+//   Widget cancelButton = TextButton(
+//     style: ButtonStyle(
+
 //     child: Text(
 //       "Cancel",
 //     ),
@@ -182,7 +184,7 @@ class _MyLayoutState extends State<MyLayout> {
   // ignore: override_on_non_overriding_member
 
   // ignore: override_on_non_overriding_member
-  File image;
+  late File image;
 
   Widget build(BuildContext context) {
     return Padding(
@@ -193,6 +195,7 @@ class _MyLayoutState extends State<MyLayout> {
         onPressed: () {
           NewPostDialogGroup(context, "gid");
         },
+        child: null,
       ),
     );
   }
@@ -209,7 +212,7 @@ NewPostDialogGroup(BuildContext context, gid) {
         decoration: InputDecoration(
           enabledBorder: OutlineInputBorder(
             borderSide: BorderSide(
-              color: Colors.green[200],
+              color: Colors.green[200]!,
             ),
             borderRadius: BorderRadius.circular(10.0),
           ),
@@ -241,7 +244,7 @@ NewPostDialogGroup(BuildContext context, gid) {
             if (await Permission.storage.request().isGranted) {
               final picker = ImagePicker();
               final pickedFile =
-                  await picker.getImage(source: ImageSource.gallery);
+                  await picker.pickImage(source: ImageSource.gallery);
 
               if (pickedFile != null) {
                 image = File(pickedFile.path);
@@ -259,8 +262,7 @@ NewPostDialogGroup(BuildContext context, gid) {
   );
 
   // ignore: deprecated_member_use
-  Widget submitButton = FlatButton(
-    hoverColor: Colors.green,
+  Widget submitButton = TextButton(
     child: Text(
       "Submit",
     ),
@@ -280,7 +282,7 @@ NewPostDialogGroup(BuildContext context, gid) {
       // );
 
       print(img);
-      String filename = await uploadFile(File(img));
+      String filename = await uploadFile(File(img!));
       filename = filename.replaceAll('"', "");
       print(filename);
       int isSave = 1;
@@ -317,8 +319,7 @@ NewPostDialogGroup(BuildContext context, gid) {
     },
   );
   // ignore: deprecated_member_use
-  Widget cancelButton = FlatButton(
-    hoverColor: Colors.green,
+  Widget cancelButton = TextButton(
     child: Text(
       "Cancel",
     ),

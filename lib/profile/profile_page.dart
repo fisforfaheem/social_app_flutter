@@ -58,7 +58,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   // ),
                   ),
               expandedHeight: 10,
-              backgroundColor: Colors.green[400].withOpacity(.79),
+              backgroundColor: Colors.green[400]!.withOpacity(.79),
               title: Center(
                 child: Text(
                   'Profile',
@@ -79,7 +79,8 @@ class _ProfilePageState extends State<ProfilePage> {
                   iconSize: 30.0,
                   onPressed: () => ChangeProfilePicDialog(context),
                 ),
-              ], systemOverlayStyle: SystemUiOverlayStyle.dark,
+              ],
+              systemOverlayStyle: SystemUiOverlayStyle.dark,
             ),
             SliverToBoxAdapter(
               child: Column(

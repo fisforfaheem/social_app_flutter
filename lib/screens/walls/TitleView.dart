@@ -15,7 +15,7 @@ class TitleView extends StatefulWidget {
   final name;
   final id;
 
-  const TitleView({Key key, this.name, this.id}) : super(key: key);
+  const TitleView({Key? key, this.name, this.id}) : super(key: key);
 
   @override
   _SessionWallState createState() => _SessionWallState();
@@ -131,7 +131,7 @@ class _SessionWallState extends State<TitleView> {
             SliverAppBar(
               stretch: true,
               elevation: 5.0,
-              backgroundColor: Colors.green[400].withOpacity(.79),
+              backgroundColor: Colors.green[400]?.withOpacity(.79),
               flexibleSpace: FlexibleSpaceBar(
                 // background: Image.asset(
                 //   'images/group3.jpg',
@@ -175,7 +175,8 @@ class _SessionWallState extends State<TitleView> {
                 //       //Vibration.vibrate(duration: 10, amplitude: 180);
                 //       Get.offAll(SignIn());
                 //     }),
-              ], systemOverlayStyle: SystemUiOverlayStyle.dark,
+              ],
+              systemOverlayStyle: SystemUiOverlayStyle.dark,
             ),
             //   SliverToBoxAdapter(child: ForAI()),
             //AI post

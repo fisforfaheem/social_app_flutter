@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_null_comparison
+
 import 'package:flutter/material.dart';
 import 'package:flutter_facebook_responsive_ui/config/config.dart';
 import 'package:flutter_facebook_responsive_ui/models/models.dart';
@@ -12,8 +14,8 @@ class ForAI extends StatelessWidget {
   Post post;
 
   ForAI({
-    Key key,
-    this.post,
+    Key? key,
+    required this.post,
   }) : super(key: key);
 
   @override
@@ -65,8 +67,8 @@ class _PostHeader extends StatelessWidget {
   final Post post;
 
   const _PostHeader({
-    Key key,
-    @required this.post,
+    Key? key,
+    required this.post,
   }) : super(key: key);
 
   @override
@@ -129,8 +131,8 @@ class _PostStats extends StatefulWidget {
   final Post post;
 
   const _PostStats({
-    Key key,
-    @required this.post,
+    Key? key,
+    required this.post,
   }) : super(key: key);
 
   @override
@@ -262,13 +264,13 @@ class _PostStatsState extends State<_PostStats> {
 class _PostButton extends StatelessWidget {
   final Icon icon;
   final String label;
-  final Function onTap;
+  final void Function() onTap;
 
   const _PostButton({
-    Key key,
-    @required this.icon,
-    @required this.label,
-    @required this.onTap,
+    Key? key,
+    required this.icon,
+    required this.label,
+    required this.onTap,
   }) : super(key: key);
 
   @override

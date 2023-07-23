@@ -16,7 +16,7 @@ import 'package:get/get.dart';
 class SessionWall extends StatefulWidget {
   final name;
 
-  const SessionWall({Key key, this.name}) : super(key: key);
+  const SessionWall({Key? key, this.name}) : super(key: key);
 
   @override
   _SessionWallState createState() => _SessionWallState();
@@ -116,7 +116,7 @@ class _SessionWallState extends State<SessionWall> {
             SliverAppBar(
               stretch: true,
               elevation: 5.0,
-              backgroundColor: Colors.green[400].withOpacity(.79),
+              backgroundColor: Colors.green[400]?.withOpacity(.79),
               flexibleSpace: FlexibleSpaceBar(
                 // background: Image.asset(
                 //   'images/group3.jpg',
@@ -158,7 +158,8 @@ class _SessionWallState extends State<SessionWall> {
                 //       //Vibration.vibrate(duration: 10, amplitude: 180);
                 //       Get.offAll(SignIn());
                 //     }),
-              ], systemOverlayStyle: SystemUiOverlayStyle.dark,
+              ],
+              systemOverlayStyle: SystemUiOverlayStyle.dark,
             ),
             //   SliverToBoxAdapter(child: ForAI()),
             //AI post

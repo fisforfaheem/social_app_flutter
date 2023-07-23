@@ -76,7 +76,7 @@
 //   // );
 
 //   // ignore: deprecated_member_use
-//   Widget okButton = FlatButton(
+//   Widget okButton = TextButton(
 //     child: Text(
 //       "ok",
 //     ),

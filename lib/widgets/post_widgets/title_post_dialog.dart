@@ -33,7 +33,7 @@ class _MyLayoutState extends State<MyLayout> {
 }
 
 TitlePOstDialog(BuildContext context, String id, String name) {
-  late File image;
+  late File? image;
   TextEditingController newPostext = TextEditingController();
 
   Widget textField = Container(
@@ -62,7 +62,7 @@ TitlePOstDialog(BuildContext context, String id, String name) {
     child: Row(
       children: [
         Image.file(
-          image,
+          image!,
           height: 100,
         ),
         IconButton(
@@ -80,8 +80,8 @@ TitlePOstDialog(BuildContext context, String id, String name) {
               if (pickedFile != null) {
                 image = File(pickedFile.path);
                 SharedPreferences pref = await SharedPreferences.getInstance();
-                pref.setString("img", image.path);
-                print(image.path);
+                pref.setString("img", image!.path);
+                print(image?.path);
               } else {
                 print('No image selected.');
               }

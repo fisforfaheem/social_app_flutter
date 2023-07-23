@@ -16,8 +16,8 @@ class PostContainerBiitWall extends StatelessWidget {
   final ind;
 
   const PostContainerBiitWall({
-    Key key,
-    @required this.post,
+    Key? key,
+    required this.post,
     this.ind,
   }) : super(key: key);
 
@@ -73,8 +73,8 @@ class _PostHeader extends StatelessWidget {
   final Post post;
 
   const _PostHeader({
-    Key key,
-    @required this.post,
+    Key? key,
+    required this.post,
   }) : super(key: key);
 
   @override
@@ -124,7 +124,7 @@ class _PostHeader extends StatelessWidget {
           icon: const Icon(Icons.more_horiz),
           onPressed: () async {
             SharedPreferences prefs = await SharedPreferences.getInstance();
-            String isDiary = prefs.getString("diary");
+            String? isDiary = prefs.getString("diary");
             print("diary ==== " + isDiary.toString());
             if (isDiary == "yes") {
               print("3456789");
@@ -146,8 +146,8 @@ class _PostStats extends StatefulWidget {
   final Post post;
   final ind;
   const _PostStats({
-    Key key,
-    @required this.post,
+    Key? key,
+    required this.post,
     this.ind,
   }) : super(key: key);
 
@@ -286,13 +286,13 @@ class _PostStatsState extends State<_PostStats> {
 class _PostButton extends StatelessWidget {
   final Icon icon;
   final String label;
-  final Function onTap;
+  final void Function() onTap;
 
   const _PostButton({
-    Key key,
-    @required this.icon,
-    @required this.label,
-    @required this.onTap,
+    Key? key,
+    required this.icon,
+    required this.label,
+    required this.onTap,
   }) : super(key: key);
 
   @override

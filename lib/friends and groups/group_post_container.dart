@@ -15,8 +15,8 @@
 //   final Post post;
 
 //   const GroupPostContainer({
-//     Key key,
-//     @required this.post,
+//       Key? key,
+//   required this.post,
 //   }) : super(key: key);
 
 //   @override
@@ -68,8 +68,8 @@
 //   final Post post;
 
 //   const _PostHeader({
-//     Key key,
-//     @required this.post,
+//       Key? key,
+//   required this.post,
 //   }) : super(key: key);
 
 //   @override
@@ -119,7 +119,7 @@
 //           icon: const Icon(Icons.more_horiz),
 //           onPressed: () async {
 //             SharedPreferences prefs = await SharedPreferences.getInstance();
-//             String isDiary = prefs.getString("diary");
+//            String? isDiary = prefs.getString("diary");
 //             print("diary ==== " + isDiary.toString());
 //             if (isDiary == "yes") {
 //               print("3456789");
@@ -141,8 +141,8 @@
 //   final Post post;
 
 //   const _PostStats({
-//     Key key,
-//     @required this.post,
+//       Key? key,
+//   required this.post,
 //   }) : super(key: key);
 
 //   @override
@@ -276,13 +276,13 @@
 // class _PostButton extends StatelessWidget {
 //   final Icon icon;
 //   final String label;
-//   final Function onTap;
+//   final void Function() onTap;
 
 //   const _PostButton({
-//     Key key,
-//     @required this.icon,
-//     @required this.label,
-//     @required this.onTap,
+//       Key? key,
+//     required this.icon,
+//     required this.label,
+//     required this.onTap,
 //   }) : super(key: key);
 
 //   @override

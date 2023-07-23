@@ -56,9 +56,9 @@
 //   getLists();
 //   // set up the buttons
 
-//   Widget timeTable = FlatButton(
+//   Widget timeTable = TextButton(
 //     color: Colors.green[100],
-//     hoverColor: Colors.green,
+//     style: ButtonStyle(
 //     child: Text("IT Boys Only",
 //         style: TextStyle(
 //           fontSize: 18,

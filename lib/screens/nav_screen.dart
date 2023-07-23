@@ -8,7 +8,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class CustomeNavbar extends StatefulWidget {
   final ind;
-  const CustomeNavbar({Key key, this.ind}) : super(key: key);
+  const CustomeNavbar({Key? key, this.ind}) : super(key: key);
 
   @override
   _CustomeNavbarState createState() => _CustomeNavbarState();
@@ -19,8 +19,8 @@ class _CustomeNavbarState extends State<CustomeNavbar> {
   var fullName = '';
   atStart() async {
     SharedPreferences pref = await SharedPreferences.getInstance();
-    type = pref.getString("UType");
-    fullName = pref.getString("FullName");
+    type = pref.getString("UType")!;
+    fullName = pref.getString("FullName")!;
 
     setState(() {});
   }
@@ -48,8 +48,8 @@ class _CustomeNavbarState extends State<CustomeNavbar> {
               backgroundColor: Colors.green.withOpacity(.09),
               selectedIndex: widget.ind,
               rippleColor:
-                  Colors.grey[300], // tab button ripple color when pressed
-              hoverColor: Colors.grey[100], // tab button hover color
+                  Colors.grey[300]!, // tab button ripple color when pressed
+              hoverColor: Colors.grey[100]!, // tab button hover color
               haptic: true, // haptic feedback
               tabBorderRadius: 200,
               tabActiveBorder: Border.all(
@@ -68,7 +68,7 @@ class _CustomeNavbarState extends State<CustomeNavbar> {
                 BoxShadow(blurRadius: 20, color: Colors.black.withOpacity(.1))
               ],
               tabBackgroundColor:
-                  Colors.grey[100], // selected tab background color
+                  Colors.grey[100]!, // selected tab background color
               // padding: EdgeInsets.symmetric(horizontal: 12, vertical: 5),
               tabs: [
                 GButton(
@@ -136,8 +136,8 @@ class _CustomeNavbarState extends State<CustomeNavbar> {
               backgroundColor: Colors.green.withOpacity(.09),
               selectedIndex: widget.ind,
               rippleColor:
-                  Colors.grey[300], // tab button ripple color when pressed
-              hoverColor: Colors.grey[100], // tab button hover color
+                  Colors.grey[300]!, // tab button ripple color when pressed
+              hoverColor: Colors.grey[100]!, // tab button hover color
               haptic: true, // haptic feedback
               tabBorderRadius: 200,
               tabActiveBorder: Border.all(
@@ -156,7 +156,7 @@ class _CustomeNavbarState extends State<CustomeNavbar> {
                 BoxShadow(blurRadius: 20, color: Colors.black.withOpacity(.1))
               ],
               tabBackgroundColor:
-                  Colors.grey[100], // selected tab background color
+                  Colors.grey[100]!, // selected tab background color
               // padding: EdgeInsets.symmetric(horizontal: 12, vertical: 5),
               tabs: [
                 GButton(

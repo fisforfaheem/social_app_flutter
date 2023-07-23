@@ -40,15 +40,18 @@ class _MyLayoutState extends State<MyLayout> {
         onPressed: () {
           NewIntelligentPostDialog(context);
         },
+        child: null,
       ),
     );
   }
 }
 
 NewIntelligentPostDialog(BuildContext context) {
-  Widget timeTable = FlatButton(
-    color: Colors.green[100],
-    hoverColor: Colors.green,
+  Widget timeTable = TextButton(
+    style: ButtonStyle(
+      backgroundColor: MaterialStateProperty.all<Color>(Colors.green[100]!),
+      overlayColor: MaterialStateProperty.all<Color>(Colors.green),
+    ),
     child: Text("Timetable",
         style: TextStyle(
           fontSize: 18,
@@ -58,9 +61,11 @@ NewIntelligentPostDialog(BuildContext context) {
     },
   );
 
-  Widget dateSheet = FlatButton(
-    color: Colors.green[100],
-    hoverColor: Colors.green,
+  Widget dateSheet = TextButton(
+    style: ButtonStyle(
+      backgroundColor: MaterialStateProperty.all<Color>(Colors.green[100]!),
+      overlayColor: MaterialStateProperty.all<Color>(Colors.green),
+    ),
     child: Text("Datesheet",
         style: TextStyle(
           fontSize: 18,
@@ -69,9 +74,11 @@ NewIntelligentPostDialog(BuildContext context) {
       Get.close(1);
     },
   );
-  Widget result = FlatButton(
-    hoverColor: Colors.green,
-    color: Colors.green[100],
+  Widget result = TextButton(
+    style: ButtonStyle(
+      backgroundColor: MaterialStateProperty.all<Color>(Colors.green[100]!),
+      overlayColor: MaterialStateProperty.all<Color>(Colors.green),
+    ),
     child: Text("Result",
         style: TextStyle(
           fontSize: 18,

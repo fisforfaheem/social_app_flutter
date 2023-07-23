@@ -19,13 +19,14 @@ class _MyLayoutState extends State<MyLayout> {
   // ignore: override_on_non_overriding_member
 
   // ignore: override_on_non_overriding_member
-  File image;
+  late File image;
 
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(18.0),
       // ignore: missing_required_param
       child: ElevatedButton(
+        child: null,
         //child: Text('add post'),
         onPressed: () {
           NewPostDialogClassWall(context);
@@ -46,7 +47,7 @@ NewPostDialogClassWall(BuildContext context) {
         decoration: InputDecoration(
           enabledBorder: OutlineInputBorder(
             borderSide: BorderSide(
-              color: Colors.green[200],
+              color: Colors.green[200]!,
             ),
             borderRadius: BorderRadius.circular(10.0),
           ),
@@ -78,7 +79,7 @@ NewPostDialogClassWall(BuildContext context) {
             if (await Permission.storage.request().isGranted) {
               final picker = ImagePicker();
               final pickedFile =
-                  await picker.getImage(source: ImageSource.gallery);
+                  await picker.pickImage(source: ImageSource.gallery);
 
               if (pickedFile != null) {
                 image = File(pickedFile.path);
@@ -96,8 +97,11 @@ NewPostDialogClassWall(BuildContext context) {
   );
 
   // ignore: deprecated_member_use
-  Widget submitButton = FlatButton(
-    hoverColor: Colors.green,
+  Widget submitButton = TextButton(
+    style: ButtonStyle(
+      backgroundColor: MaterialStateProperty.all<Color>(Colors.green[100]!),
+      overlayColor: MaterialStateProperty.all<Color>(Colors.green),
+    ),
     child: Text(
       "Submit",
     ),
@@ -117,7 +121,7 @@ NewPostDialogClassWall(BuildContext context) {
       // );
 
       print(img);
-      String filename = await uploadFile(File(img));
+      String filename = await uploadFile(File(img!));
       filename = filename.replaceAll('"', "");
       print(filename);
       int isSave = 1;
@@ -141,8 +145,11 @@ NewPostDialogClassWall(BuildContext context) {
     },
   );
   // ignore: deprecated_member_use
-  Widget cancelButton = FlatButton(
-    hoverColor: Colors.green,
+  Widget cancelButton = TextButton(
+    style: ButtonStyle(
+      backgroundColor: MaterialStateProperty.all<Color>(Colors.green[100]!),
+      overlayColor: MaterialStateProperty.all<Color>(Colors.green),
+    ),
     child: Text(
       "Cancel",
     ),

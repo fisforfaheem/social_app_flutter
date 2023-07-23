@@ -89,8 +89,8 @@ class _TestMeState extends State<TestMe> {
       ),
       body: Container(
         child: CommentBox(
-          userImage:
-              "https://lh3.googleusercontent.com/a-/AOh14GjRHcaendrf6gU5fPIVd8GIl1OgblrMMvGUoCBj4g=s400",
+          userImage: NetworkImage(
+              "https://lh3.googleusercontent.com/a-/AOh14GjRHcaendrf6gU5fPIVd8GIl1OgblrMMvGUoCBj4g=s400"),
           child: commentChild(filedata),
           labelText: 'Write a comment...',
           withBorder: false,

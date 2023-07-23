@@ -24,7 +24,7 @@ class _PersonalDiaryState extends State<PersonalDiary> {
     var userId = prefs.getString(
       "userId",
     );
-    type = prefs.getString("UType");
+    type = prefs.getString("UType")!;
     print(userId);
 
     /// api calling to show posts
@@ -136,7 +136,8 @@ class _PersonalDiaryState extends State<PersonalDiary> {
                 //   iconSize: 30.0,
                 //   onPressed: () => print(''),
                 // ),
-              ], systemOverlayStyle: SystemUiOverlayStyle.dark,
+              ],
+              systemOverlayStyle: SystemUiOverlayStyle.dark,
             ),
             GetBuilder<PostController1>(
               init: PostController1(),
