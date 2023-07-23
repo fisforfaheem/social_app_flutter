@@ -4,7 +4,7 @@
 
 <h1 align="center">Hi 👋, I'm Faheem 👩‍💻</h1>
 <h3 align="center">A Social App Built Using FLutter.</h3>
-<h32 align="start">The main objective of this application is to provide a single platform for the Students/Teachers of University/College to communicate, moreover the it provides the following features to the users:<br> 
+<h32 align="start">The main objective of this application is to provide a single platform for the Students/Teachers of University/College to communicate, moreover the it provides the following features to the users:<br> <br>
   Students and Teachers in my University should be able to communicate with one another seamlessly and effortlessly, without getting bogged down in unnecessary or irrelevant platforms and ways to accomplish something that is simple and easily managed.<br><br>
 --	Posts abouts the Events happening in the University/College <br>
 --	Group communication among the students and teachers or administration.<br>
