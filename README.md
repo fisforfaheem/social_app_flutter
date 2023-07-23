@@ -31,9 +31,6 @@ This application can be installed on any Smartphone/Tablet/Desktops which is in 
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
-<a href="https://www.instagram.com/fisforfaheem/" target="blank"><img align="center" src="https://desiprogrammer.com/static/icons/instagram.svg" alt="" height="80" width="80" /></a><a href="https://www.youtube.com/channel/UCqtK6fDv1FA2AN_hZuIbnhg" target="blank"><img align="center" src="https://desiprogrammer.com/static/icons/yt.svg" alt="" height="80" width="80" /></a>
-<a href="https://twitter.com/fisforfaheem" target="blank"><img align="center" src="https://desiprogrammer.com/static/icons/twitter.svg" alt="" height="80" width="80" /></a>
-<a href="https://www.facebook.com/fisforfaheem" target="blank"><img align="center" src="https://desiprogrammer.com/static/icons/facebook.svg" alt="" height="80" width="80" /></a>
 <a href="https://fisforfaheem.medium.com/" target="blank"><img align="center" src="https://cdn4.iconfinder.com/data/icons/social-media-2210/24/Medium-512.png" alt="" height="80" width="80" /></a>
 </p>
 
